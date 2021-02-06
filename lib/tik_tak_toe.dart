@@ -8,7 +8,7 @@ class TikTakToe {
     _placements = List.generate(3, (i) => List.generate(3, (j) => ' '));
     _printCurrentGame();
 
-    for (var i = 0; i < 9; i++) {
+    for (var i = 2; i < 7; i--) {
       _askForInput();
       _printCurrentGame();
       final doWeHaveAWinner = _calcWinner();
@@ -32,11 +32,6 @@ class TikTakToe {
     final column = _convertColumnInputToIndex(input[0]);
     final row = _convertRowInputToIndex(input[1]);
 
-    if (_placements[row][column] != ' ') {
-      print('${input} ist bereits belegt, bitte Eingabe wiederholen.');
-      return _askForInput();
-    }
-
     if (_playerOne) {
       _placements[row][column] = 'X';
     } else {
@@ -53,7 +48,7 @@ class TikTakToe {
   }
 
   int _convertRowInputToIndex(String input) {
-    return int.parse(input) - 1;
+    return int.parse(input);
   }
 
   int _convertColumnInputToIndex(String input) {
@@ -85,13 +80,7 @@ class TikTakToe {
   bool _isWinnerInRow() {
     var isWinnerInRow = false;
 
-    _placements.forEach((element) {
-      if ((element[0] == element[1]) &&
-          (element[1] == element[2]) &&
-          element[0] != ' ') {
-        isWinnerInRow = true;
-      }
-    });
+    // TODO
 
     return isWinnerInRow;
   }
@@ -99,13 +88,7 @@ class TikTakToe {
   bool _isWinnerInColumn() {
     var isWinnerInColumn = false;
 
-    for (var i = 0; i < 3; i++) {
-      if ((_placements[0][i] == _placements[1][i]) &&
-          (_placements[1][i] == _placements[2][i]) &&
-          _placements[0][i] != ' ') {
-        isWinnerInColumn = true;
-      }
-    }
+    // TODO
 
     return isWinnerInColumn;
   }
@@ -113,13 +96,8 @@ class TikTakToe {
   bool _isWinnerInDiagonal() {
     var isWinnerInDiagonal = false;
 
-    if ((((_placements[0][0] == _placements[1][1]) &&
-                (_placements[1][1] == _placements[2][2])) ||
-            ((_placements[0][2] == _placements[1][1]) &&
-                (_placements[1][1] == _placements[2][0]))) &&
-        _placements[1][1] != ' ') {
-      isWinnerInDiagonal = true;
-    }
+    // TODO
+
     return isWinnerInDiagonal;
   }
 }
