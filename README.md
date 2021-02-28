@@ -1,5 +1,8 @@
-A sample command-line application with an entrypoint in `bin/`, library code in `lib/`, and example unit test in `test/`
-.
+### TikTakToe Dart example
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+This is a small console TikTakToe example application written in `Dart`. It's for learning purpose.
+
+You can find a `with_bugs` branch with missing methods as a starting point. A working solution is in the `master`
+branch.
+
+⚠️ Strings are in German, I will change this in the future.
