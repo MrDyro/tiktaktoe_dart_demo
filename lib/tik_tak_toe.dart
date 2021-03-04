@@ -33,7 +33,7 @@ class TikTakToe {
     final row = _convertRowInputToIndex(input[1]);
 
     if (_placements[row][column] != ' ') {
-      print('${input} ist bereits belegt, bitte Eingabe wiederholen.');
+      print('$input ist bereits belegt, bitte Eingabe wiederholen.');
       return _askForInput();
     }
 
